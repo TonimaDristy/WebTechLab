@@ -1,0 +1,28 @@
+
+  th, td {
+    border: 1px solid wheat;
+    padding: 20px;
+    
+    
+  }
+  th {
+    background-color: #f3eded;
+   
+  }
+  
+   .singup input,label{
+    margin-top: 10px ;
+    display: block;
+    width: 95%;
+    padding: 7px;
+    border-radius: 5px;
+    
+  }
+  .table{
+    display:flex;
+    align-items: center;
+    margin-left: 110px;
+    margin-top: 20px;
+
+  
+  }

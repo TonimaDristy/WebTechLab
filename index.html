@@ -1,84 +1,184 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Custom Layout</title>
-    <style>
-      .ab {
-        text-align: center;
-      }
-      .cd{
-        text-align: left;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      .container {
-        width: 100%;
-        height: 1500px;
-        position: relative;
-        margin: 50px auto;
-        display: flex;
-        overflow: hidden;
-      }
-      .top-circle {
-        width: 50px;
-        height: 25px;
-        border-radius: 50%;
-        position: absolute;
-        top: -30px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: rgb(110, 90, 163);
-      }
-      .left-section {
-        width: 50%;
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-      }
-      .left-top {
-        flex: 2;
-        background-color: lightblue;
-      }
-      .left-bottom {
-        flex: 1;
-        background-color: rgb(30, 99, 152);
-      }
-      .right-section {
-        width: 50%;
-        flex: 1;
-        background-color: rgb(26, 130, 162);
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="Style.css" />
+    <script defer src="./Validation.js"></script>
+    <link rel="stylesheet" href="API.css" />
   </head>
   <body>
-    <div class="top-circle"></div>
+    <div class="img">
+      <img src="/MidWebPage/OIP.jpg" alt="" />
+
+      <h1 style="text-align: center">Air quality index</h1>
+      
+    </div>
+
     <div class="container">
       <div class="left-section">
         <div class="left-top">
-          <h2 class="ab">Registration</h2>
-          <form class="cd">
-            <br>
-            <label class="cd" for="name">Full name:</label>
-            <input class="ab" type="text" placeholder="Your Name" /></br>
-            <br> 
-            <lebel type="Email">Enter your Email:</lebel>
-            <input class="ab" type="Email" placeholder="Your Email"/> </br>
-            <br> 
-            <lebel type="password">Enter your password:</lebel>
-            <input class="ab" type="password" placeholder="password"/> </br>
-            <br>
-            <label type="password">Confirm password:</label> 
-            <input type="password" placeholder="confirm password"/>
-            <select="country"
-          </form>
-        </div>
+          <div>
+            <h1 style="text-align: center">Registration</h1>
+            <form id="form" class="form">
+              <div class="input-control">
+                <label for="fullname">Full name:</label>
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="Enter Your Name"
+                />
+                <div class="error"></div>
+              </div>
 
-        <div class="left-bottom"></div>
+              <div class="input-control">
+                <lebel for="email">Your Email:</lebel>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder=" Enter Your Email"
+                />
+                <div class="error"></div>
+              </div>
+
+              <div class="input-control">
+                <lebel type="password">Enter your password:</lebel>
+                <input type="password" id="password" placeholder="password" />
+                <div class="error"></div>
+              </div>
+
+              <div class="input-control">
+                <label type="password">Confirm password:</label>
+                <input
+                  type="password"
+                  id="password2"
+                  placeholder="Confirmpassword"
+                />
+                <div class="error"></div>
+              </div>
+
+              <div class="input-control">
+                <label for="country">Choose your country:</label>
+                <select id="country" name="country">
+                  <option value="">Select a country</option>
+                  <option value="bd">Bangladesh</option>
+                  <option value="us">United States</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="ca">Canada</option>
+                  <option value="au">Australia</option>
+                </select>
+                <div class="error"></div>
+              </div>
+
+              <div class="input-control">
+                <label id="gender">Gender:</label>
+                <div class="radio-options">
+                  <input type="radio" id="male" name="gender" value="male" />
+                  <label for="male">Male</label>
+
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                  />
+                  <label for="female">Female</label>
+                </div>
+                <div class="error"></div>
+              </div>
+
+              <div class="input-control checkbox-inline">
+                <input type="checkbox" id="agree" name="Agree" />
+                <label for="agree">Agree</label>
+              </div>
+
+              <div>
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <div class="left-bottom">
+         
+          <h1 style="text-align: center">Login</h1>
+          <form class="singup">
+        <div class="">
+            <lebel type="email">Enter Email:</lebel>
+            <input type="email" id="email" placeholder="Email" />
+            <br>
+            <lebel type="password">Enter Password:</lebel>
+            <input type="password" id="password" placeholder="password" />
+          </div>
+          <br>
+          <div style="text-align: center;">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+          </div>
       </div>
-      <div class="right-section"></div>
-    </div>
+    
+
+     
+      <div class="right-section">
+        <div class="table">
+        <table
+          style="text-align: center;"
+            width: 100px;
+            border: 2px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+          
+        >
+          <tr>
+            <th style="border: 1px solid rgb(0, 0, 0)">Column 1</th>
+            <th style="border: 1px solid black">Column 2</th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">Row1</td>
+            <td style="border: 1px solid black">Row1</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">Row2</td>
+            <td style="border: 1px solid black">Row2</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">Row3</td>
+            <td style="border: 1px solid black">Row3</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">Row4</td>
+            <td style="border: 1px solid black">Row4</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">Row5</td>
+            <td style="border: 1px solid black">Row5</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">Row6</td>
+            <td style="border: 1px solid black">Row6</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">Row7</td>
+            <td style="border: 1px solid black">Row7</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">Row8</td>
+            <td style="border: 1px solid black">Row8</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">Row9</td>
+            <td style="border: 1px solid black">Row9</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black">Row10</td>
+            <td style="border: 1px solid black">Row10</td>
+          </tr>
+        </table>
+      </div>
+      </div>
+      </div>
+    
   </body>
 </html>
